@@ -19,4 +19,8 @@ public interface UserDAO {
     List<User> getAll();
     @Query("SELECT * FROM user WHERE email = :email")
     User findByEmail(String email);
+    @Query("SELECT * FROM user WHERE email = :email AND pwd = :pwd")
+    User findByEmailPwd(String email, String pwd);
+    /*@Query("SELECT * FROM user WHERE pwd = :pwd")
+    User findByPwd(String pwd);*/
 }

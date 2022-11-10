@@ -22,11 +22,21 @@ public class User {
     @ColumnInfo(name = "lastname")
     private String lastName;
 
+    public boolean isConnected() {
+        return connected;
+    }
+
+    public void setConnected(boolean connected) {
+        this.connected = connected;
+    }
+
     @ColumnInfo(name = "birthdate")
     private String birthdate;
 
     @ColumnInfo(name = "phone")
     private String phone;
+    @ColumnInfo(name = "connected")
+    private boolean connected;
 
     public User() {
     }
